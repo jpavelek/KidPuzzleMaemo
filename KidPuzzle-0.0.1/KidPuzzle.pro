@@ -11,12 +11,12 @@ MOBILITY += multimedia
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp
 
-INSTALLS += icon64
+INSTALLS += icon64 desktop
 
-icon64.path = $$DATADIR/icons/hicolor/64x64/apps
+icon64.path = /opt/KidPuzzle/
 icon64.files += KidPuzzle64.png
 
-desktop.path = $$DATADIR/applications/hildon
+desktop.path = /usr/share/applications/hildon/
 desktop.files += KidPuzzle.desktop
 
 # Please do not modify the following two lines. Required for deployment.
