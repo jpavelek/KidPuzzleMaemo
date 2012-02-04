@@ -1,6 +1,6 @@
 import QtQuick 1.0
 import "UI.js" as UI
-import Qt.labs.particles 1.0
+//import Qt.labs.particles 1.0
 
 Image {
     id: mainPage
