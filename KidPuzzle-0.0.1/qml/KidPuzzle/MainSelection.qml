@@ -1,6 +1,5 @@
 import Qt 4.7
 import "UI.js" as UI
-//import Qt.labs.particles 1.0
 
 Image {
     id: mainPage
@@ -9,25 +8,7 @@ Image {
     source: (Math.random() > 0.5) ? "bg2.png" : "bg1.png"
     opacity: 0.0
     smooth: true
-/*
-    Particles {
-        y: 0
-        width: parent.width
-        source: "snowflake.png"
-        lifeSpan: 15000
-        count: 50
-        emissionRate: 5
-        angle: 70
-        angleDeviation: 36
-        velocity: 40
-        velocityDeviation: 15
-        ParticleMotionWander {
-            xvariance: 2
-            yvariance: 1
-            pace: 20
-        }
-    }
-*/
+
     Component {
         id: tilesGridDelegate
         Image {
@@ -125,7 +106,17 @@ Image {
         cellHeight: UI.gridCellHeight
         flow: GridView.TopToBottom
         delegate: tilesGridDelegate
-        anchors { fill: parent; topMargin: 40; bottomMargin: 20; leftMargin: 20; rightMargin: 20 }
+        anchors { fill: parent; topMargin: 10; bottomMargin: 20; leftMargin: 20; rightMargin: 20 }
+    }
+
+    Image {
+        source: "close.png"
+        anchors { right: parent.right; bottom: parent.bottom }
+        z: 99
+        MouseArea {
+            anchors.fill: parent
+            onClicked: { Qt.quit() }
+        }
     }
 
     Behavior on opacity {  PropertyAnimation { target: mainPage; property: "opacity"; duration: 300; easing.type: Easing.InOutQuad  } }
