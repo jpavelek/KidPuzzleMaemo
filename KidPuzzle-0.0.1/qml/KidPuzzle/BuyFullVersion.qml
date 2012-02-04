@@ -1,5 +1,5 @@
 // import QtQuick 1.0 // to target S60 5th Edition or Maemo 5
-import QtQuick 1.0
+import Qt 4.7
 import "UI.js" as UI
 
 Rectangle {

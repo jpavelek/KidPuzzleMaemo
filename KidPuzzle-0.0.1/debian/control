@@ -7,7 +7,7 @@ Standards-Version: 3.7.3
 
 Package: kidpuzzle
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}
 Description: Puzzle game for toddlers
  Several levels of touch screen based puzzles, from simple to more challenging.
 XSBC-Maemo-Display-Name: KidPuzzle
