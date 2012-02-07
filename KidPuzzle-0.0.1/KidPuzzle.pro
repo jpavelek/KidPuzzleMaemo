@@ -13,8 +13,8 @@ SOURCES += main.cpp
 
 INSTALLS += icon desktop
 
-icon.path = /opt/KidPuzzle/
-icon.files += KidPuzzle64.png
+icon.path = /usr/share/icons/hicolor/scalable/hildon/
+icon.files += KidPuzzle48.png
 
 desktop.path = /usr/share/applications/hildon/
 desktop.files += KidPuzzle.desktop
