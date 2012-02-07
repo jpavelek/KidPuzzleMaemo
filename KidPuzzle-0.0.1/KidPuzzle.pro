@@ -9,7 +9,8 @@ CONFIG += mobility
 MOBILITY += multimedia
 
 # The .cpp file which was generated for your project. Feel free to hack it.
-SOURCES += main.cpp
+SOURCES += main.cpp flipper.cpp
+HEADERS += flipper.h
 
 INSTALLS += icon desktop
 

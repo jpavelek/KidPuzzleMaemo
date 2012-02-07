@@ -105,17 +105,21 @@ Image {
         cellHeight: UI.gridCellHeight
         flow: GridView.TopToBottom
         delegate: tilesGridDelegate
-        anchors { fill: parent; topMargin: 10; bottomMargin: 20; leftMargin: 20; rightMargin: 20 }
+        anchors { fill: parent; topMargin: 30; bottomMargin: 20; leftMargin: 20; rightMargin: 20 }
     }
 
     Image {
         source: "close.png"
         anchors { right: parent.right; bottom: parent.bottom }
         z: 99
-        MouseArea {
-            anchors.fill: parent
-            onClicked: { Qt.quit() }
-        }
+        MouseArea { anchors.fill: parent; onClicked: { Qt.quit() } }
+    }
+
+    Image {
+        source: "switch-away.png"
+        anchors { left: parent.left; bottom: parent.bottom }
+        z: 99
+        MouseArea { anchors.fill: parent; onClicked: { ponger.minimize() } }
     }
 
     Behavior on opacity {  PropertyAnimation { target: mainPage; property: "opacity"; duration: 300; easing.type: Easing.InOutQuad  } }
