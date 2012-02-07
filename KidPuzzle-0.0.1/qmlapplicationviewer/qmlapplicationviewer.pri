@@ -80,8 +80,6 @@ symbian {
     } else:!isEmpty(MEEGO_VERSION_MAJOR) {
         desktopfile.files = $${TARGET}_harmattan.desktop
         desktopfile.path = /usr/share/applications
-        icon.files = $${TARGET}80.png
-        icon.path = /usr/share/icons/hicolor/80x80/apps
     } else { # Assumed to be a Desktop Unix
         copyCommand =
         for(deploymentfolder, DEPLOYMENTFOLDERS) {
@@ -124,11 +122,9 @@ symbian {
     }
 
     !isEmpty(desktopfile.path) {
-        export(icon.files)
-        export(icon.path)
         export(desktopfile.files)
         export(desktopfile.path)
-        INSTALLS += icon desktopfile
+        INSTALLS += desktopfile
     }
 
     target.path = $${installPrefix}/bin

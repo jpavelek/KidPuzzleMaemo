@@ -12,10 +12,10 @@ MOBILITY += multimedia
 SOURCES += main.cpp flipper.cpp
 HEADERS += flipper.h
 
-INSTALLS += icon desktop
+INSTALLS += dicon desktop
 
-icon.path = /usr/share/icons/hicolor/scalable/hildon/
-icon.files += KidPuzzle48.png
+dicon.path = /usr/share/icons/hicolor/scalable/hildon/
+dicon.files += KidPuzzle48.png
 
 desktop.path = /usr/share/applications/hildon/
 desktop.files += KidPuzzle.desktop
