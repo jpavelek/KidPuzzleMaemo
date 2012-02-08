@@ -11,6 +11,7 @@ MOBILITY += multimedia
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp flipper.cpp
 HEADERS += flipper.h
+CONFIG  += qdbus
 
 INSTALLS += dicon desktop
 

@@ -1,6 +1,5 @@
+#include <QtDBus/QtDBus>
 #include "flipper.h"
-#include <QtGui/QApplication>
-#include <QtDeclarative>
 
 Flipper::Flipper(QObject *parent) : QObject(parent)
 {
@@ -12,5 +11,8 @@ void Flipper::setView(QDeclarativeView *vp) {
 }
 
 void Flipper::minimize(void) {
-   v->setWindowState(Qt::WindowMinimized);
+   //v->setWindowState(v->windowState() ^ Qt::WindowMinimized);
+   QDBusConnection connection = QDBusConnection::sessionBus();
+   QDBusMessage message = QDBusMessage::createSignal("/","com.nokia.hildon_desktop","exit_app_view");
+   connection.send(message);
 }

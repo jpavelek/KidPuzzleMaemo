@@ -1,3 +1,9 @@
+kidpuzzle (0.0.2) unstable; urgency=low
+
+  * Switch and Quit buttons rework
+
+ -- J Pavelek <jpavelek@live.com>  Tue, 07 Feb 2012 21:18:26 +0100
+
 kidpuzzle (0.0.1) unstable; urgency=low
 
   * Initial Release for Maemo5

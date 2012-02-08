@@ -24,8 +24,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     flipper.setView(view);
     view->rootContext()->setContextProperty("ponger", &flipper);
 
-    view->setSource(QUrl("qml/KidPuzzle/main.qml"));
-    view->showFullscreen();
+    view->setSource(QUrl("file:///opt/KidPuzzle/qml/KidPuzzle/main.qml"));
+    view->showFullScreen();
     view->setWindowTitle("Puzzle");
     //Flickr removal
     view->setAttribute(Qt::WA_OpaquePaintEvent);
